@@ -2,6 +2,14 @@
 
 A scalable rate-limiting solution implemented in a Node.js application that controls the number of requests a user or IP address can make within a specified time frame.
 
+
+## Key Features
+
+- **In-memory request tracking**: Stores request counts per IP in a `Map` object, providing quick lookups and updates for each request.
+- **Rate limiting**: Limits the number of requests per IP within a configurable time window.
+- **Automatic cleanup**: Periodically removes old entries from the `Map` to prevent memory bloat.
+- **Node.js Clustering**: Utilizes Node.js's cluster module to take advantage of multi-core systems, allowing parallel handling of requests and improved scalability.
+
 ## Installation
 
 1. **Clone the repository:**
